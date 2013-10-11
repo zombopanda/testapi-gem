@@ -1,4 +1,4 @@
-Copyright (c) 2013 zombopanda
+Copyright (c) 2013 bo
 
 MIT License
 
