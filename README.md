@@ -1,16 +1,6 @@
-# Testapi
-
-TODO: Write a gem description
-
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'testapi'
-
-And then execute:
-
-    $ bundle
+    $ rake install
 
 Or install it yourself as:
 
@@ -18,12 +8,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'testapi'
+@api = Testapi::Client.new url: 'http://localhost:9393'
+begin
+  @api.add \
+    first_name: 'Ivan',
+    last_name: 'Ivanov',
+    email: 'test@gmail.com',
+    mobile: '+380631234567',
+    permission_type: 'permanent',
+    channel: 'sms+email',
+    company_name: 'Company'
 
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+  puts 'success'
+rescue Exception => e
+  p e
+end
+```
