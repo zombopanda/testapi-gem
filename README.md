@@ -2,10 +2,6 @@
 
     $ rake install
 
-Or install it yourself as:
-
-    $ gem install testapi
-
 ## Usage
 
 ```ruby
